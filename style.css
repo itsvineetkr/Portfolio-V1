@@ -130,13 +130,13 @@ nav ul {
 
     .photo {
         position: relative;
-        top: 20vh;
+        top: 16vh;
         right: 54vw;
     }
 
     .intro {
         position: relative;
-        top: 57vh;
+        top: 50vh;
         padding-left: 8vw;
         width: 80vw;
     }
