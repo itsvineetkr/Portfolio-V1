@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
@@ -41,44 +42,49 @@ nav ul {
     gap: 50px;
 }
 
-.home{
+.home {
     display: flex;
     flex-direction: row;
     height: 100vh;
 }
 
-.intro{
+.intro {
     position: relative;
     top: 33vh;
     padding-left: 8vw;
     width: 80vw;
 }
-.intro h3{
+
+.intro h3 {
     font-size: 67px;
     font-weight: 200;
 }
-.intro h1{
+
+.intro h1 {
     font-size: 183px;
     font-weight: 300;
 }
-.intro h4{
+
+.intro h4 {
     font-size: 38px;
     font-weight: 400;
     padding-top: 37px;
 }
-.intro h5{
+
+.intro h5 {
     font-size: 23px;
     font-weight: 200;
     width: 60vw;
     padding-top: 27px;
 }
 
-.photo{
+.photo {
     position: relative;
     top: 15vh;
     right: 12vw;
 }
-.photo img{
+
+.photo img {
     max-width: 450px;
 }
 
@@ -114,5 +120,50 @@ nav ul {
 
     .menu-icon {
         display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .photo img {
+        max-width: 250px;
+    }
+
+    .photo {
+        position: relative;
+        top: 20vh;
+        right: 54vw;
+    }
+
+    .intro {
+        position: relative;
+        top: 57vh;
+        padding-left: 8vw;
+        width: 80vw;
+    }
+
+    .intro h3 {
+        font-size: 48px;
+        font-weight: 200;
+    }
+
+    .intro h1 {
+        font-size: 110px;
+        font-weight: 300;
+    }
+
+    .intro h4 {
+        font-size: 26px;
+        font-weight: 300;
+        padding-top: 14px;
+    }
+
+    .intro h5 {
+        font-size: 16px;
+        font-weight: 200;
+        width: 80vw;
+        padding-top: 14px;
+    }
+    nav {
+        padding: 25px 42px;
     }
 }
