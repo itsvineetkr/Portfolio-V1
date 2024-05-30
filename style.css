@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.raleway-<uniquifier> {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(11, 11, 11);
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 100px;
+    font-weight: 400;
+    font-size: 22px;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.intro{
+    position: relative;
+    top: 40vh;
+    padding-left: 8vw;
+    width: 80vw;
+}
+.intro h3{
+    font-size: 67px;
+    font-weight: 200;
+}
+.intro h1{
+    font-size: 183px;
+    font-weight: 300;
+}
+.intro h4{
+    font-size: 38px;
+    font-weight: 400;
+    padding-top: 37px;
+}
+.intro h5{
+    font-size: 23px;
+    font-weight: 200;
+    width: 60vw;
+    padding-top: 27px;
+}
+
+.photo{
+    position: relative;
+    top: 15vh;
+    right: 12vw;
+}
+.photo img{
+    max-width: 450px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
