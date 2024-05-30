@@ -12,18 +12,16 @@
     <header>
         <nav>
             <div class="logo">Vineet</div>
-            <ul>
+            <ul class="nav-links">
                 <li class="right-buttons">About</li>
                 <li class="right-buttons">Work</li>
                 <li class="right-buttons">Say Hello!</li>
             </ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         </nav>
     </header>
     <main>
         <div class="home">
-            <div class="photo-container">
-                <img src="1.png" alt="Vineet's photo">
-            </div>
             <div class="intro">
                 <h3>I'm</h3>
                 <h1>Vineet</h1>
@@ -31,6 +29,9 @@
                 <h5>I am a computer science student passionate about coding and eager to master full-stack development.
                     Join
                     me on my journey of building seamless web applications.</h5>
+            </div>
+            <div class="photo">
+                <img src="1.png" alt="Vineet's photo">
             </div>
         </div>
         <div class="skill">
@@ -74,22 +75,26 @@
         <div class="projects">
             <div class="project-block">
                 <h2>XYZ project on ABC</h2>
-                <h3>This project is made using this this and it basically does this work and makes your life better.</h3>
+                <h3>This project is made using this this and it basically does this work and makes your life better.
+                </h3>
                 <a href="">Github</a>
             </div>
             <div class="project-block">
                 <h2>XYZ project on ABC</h2>
-                <h3>This project is made using this this and it basically does this work and makes your life better.</h3>
+                <h3>This project is made using this this and it basically does this work and makes your life better.
+                </h3>
                 <a href="">Github</a>
             </div>
             <div class="project-block">
                 <h2>XYZ project on ABC</h2>
-                <h3>This project is made using this this and it basically does this work and makes your life better.</h3>
+                <h3>This project is made using this this and it basically does this work and makes your life better.
+                </h3>
                 <a href="">Github</a>
             </div>
             <div class="project-block">
                 <h2>XYZ project on ABC</h2>
-                <h3>This project is made using this this and it basically does this work and makes your life better.</h3>
+                <h3>This project is made using this this and it basically does this work and makes your life better.
+                </h3>
                 <a href="">Github</a>
             </div>
         </div>
@@ -104,6 +109,12 @@
             <h1>itsvineetkr@gmail.com</h1>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
