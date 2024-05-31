@@ -13,9 +13,10 @@
         <nav>
             <div class="logo">Vineet</div>
             <ul class="nav-links">
-                <li class="right-buttons">About</li>
-                <li class="right-buttons">Work</li>
-                <li class="right-buttons">Say Hello!</li>
+                <li class="right-buttons"><a href="#">About</a></li>
+                <li class="right-buttons"><a href="#">Work</a></li>
+                <li class="right-buttons"><a href="#">Say Hello!</a></li>
+                <li id="theme-toggle">Switch Theme</li>
             </ul>
             <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         </nav>
@@ -24,7 +25,7 @@
         <div class="home">
             <div class="intro">
                 <h3>I'm</h3>
-                <h1 id="name">Vineet</h1>
+                <h1>Vineet</h1>
                 <h4>Aspiring Software Engineer</h4>
                 <h5>I am a computer science student passionate about coding and eager to master full-stack development.
                     Join
@@ -114,25 +115,16 @@
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
-        document.addEventListener('DOMContentLoaded', () => {
-            const nameElement = document.getElementById('name');
-            const translations = [ "فينيت", "Винит", "Βινίτ", "וינית", "فينيت", "Винит", "Βινίτ", "Vineet"];
-            let index = 0;
+        document.addEventListener("DOMContentLoaded", function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
 
-            const switchName = () => {
-                nameElement.innerText = translations[index];
-                index = (index + 1) % translations.length;
-            };
-
-            // Switch the name every 2 seconds, then stop after 10 seconds
-            const interval = setInterval(switchName, 150);
-
-            setTimeout(() => {
-                clearInterval(interval);
-                nameElement.innerText = "Vineet"; // Final name in English
-            }, 1000); // 10 seconds
+            themeToggle.addEventListener('click', function () {
+                body.classList.toggle('dark-theme');
+                document.querySelector('nav').classList.toggle('dark-theme');
+                document.querySelector('.nav-links').classList.toggle('dark-theme');
+            });
         });
-
     </script>
 </body>
 
