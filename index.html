@@ -24,7 +24,7 @@
         <div class="home">
             <div class="intro">
                 <h3>I'm</h3>
-                <h1>Vineet</h1>
+                <h1 id="name">Vineet</h1>
                 <h4>Aspiring Software Engineer</h4>
                 <h5>I am a computer science student passionate about coding and eager to master full-stack development.
                     Join
@@ -114,6 +114,25 @@
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameElement = document.getElementById('name');
+            const translations = [ "فينيت", "Винит", "Βινίτ", "וינית", "فينيت", "Винит", "Βινίτ", "Vineet"];
+            let index = 0;
+
+            const switchName = () => {
+                nameElement.innerText = translations[index];
+                index = (index + 1) % translations.length;
+            };
+
+            // Switch the name every 2 seconds, then stop after 10 seconds
+            const interval = setInterval(switchName, 150);
+
+            setTimeout(() => {
+                clearInterval(interval);
+                nameElement.innerText = "Vineet"; // Final name in English
+            }, 1000); // 10 seconds
+        });
+
     </script>
 </body>
 

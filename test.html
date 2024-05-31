@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vineet's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .hero {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            transition: opacity 0.6s ease-in-out;
+            opacity: 1;
+            width: 200px;
+            /* Fixed width */
+            text-align: center;
+            /* Center text within the fixed width */
+        }
+
+        h1.fade-out {
+            opacity: 0;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #555;
+            margin-bottom: 1em;
+        }
+
+        .description {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <section class="hero">
+            <h1 id="name">Vineet</h1>
+            <p class="subtitle">Aspiring Engineer</p>
+            <p class="description">I am a computer science student passionate about coding and eager to master
+                full-stack development. Join me on my journey of building seamless web applications.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Vineet. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameElement = document.getElementById('name');
+            const translations = ["विनीत", "وِنےت", "ビニート", "维尼特", "فينيت", "비닛", "Винит", "Βινίτ", "וינית", "Vineet"];
+            let index = 0;
+
+            const switchName = () => {
+                nameElement.classList.add('fade-out');
+                setTimeout(() => {
+                    nameElement.innerText = translations[index];
+                    nameElement.classList.remove('fade-out');
+                    index = (index + 1) % translations.length;
+                }, 650); // Half the time of the transition duration (0.6s) for smoother effect
+            };
+
+            // Switch the name every 1.3 seconds, then stop after 13 seconds
+            const interval = setInterval(switchName, 1300);
+
+            setTimeout(() => {
+                clearInterval(interval);
+                nameElement.classList.add('fade-out');
+                setTimeout(() => {
+                    nameElement.innerText = "Vineet"; // Final name in English
+                    nameElement.classList.remove('fade-out');
+                }, 650);
+            }, 13000); // 13 seconds
+        });
+    </script>
+</body>
+
+</html>

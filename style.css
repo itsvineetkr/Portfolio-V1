@@ -68,7 +68,7 @@ nav ul {
 .intro h4 {
     font-size: 38px;
     font-weight: 400;
-    padding-top: 37px;
+    margin-top: 20px;
 }
 
 .intro h5 {
@@ -130,7 +130,7 @@ nav ul {
 
     .photo {
         position: relative;
-        top: 16vh;
+        top: 12vh;
         right: 54vw;
     }
 
@@ -142,23 +142,23 @@ nav ul {
     }
 
     .intro h3 {
-        font-size: 48px;
+        font-size: 42px;
         font-weight: 200;
     }
 
     .intro h1 {
-        font-size: 110px;
+        font-size: 100px;
         font-weight: 300;
     }
 
     .intro h4 {
-        font-size: 26px;
+        font-size: 22px;
         font-weight: 300;
         padding-top: 14px;
     }
 
     .intro h5 {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 200;
         width: 80vw;
         padding-top: 14px;
