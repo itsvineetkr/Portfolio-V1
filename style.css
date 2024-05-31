@@ -303,6 +303,7 @@ footer {
 .email h1 {
     font-size: 70px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .email h4 {

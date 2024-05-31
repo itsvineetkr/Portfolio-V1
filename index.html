@@ -22,7 +22,7 @@
         </nav>
     </header>
     <main>
-        
+
         <div class="home">
             <div class="intro">
                 <h3>I'm</h3>
@@ -41,17 +41,20 @@
         <div class="skill">
             <div class="block">
                 <h2 class="block-h2">Backend</h2>
-                <h3 class="block-h3">I can work fluently on python language, and for building website I use Node JS. I've also gaining
+                <h3 class="block-h3">I can work fluently on python language, and for building website I use Node JS.
+                    I've also gaining
                     knowledge of Machine Learning and Artificitial Intelligence.</h3>
             </div>
             <div class="block">
                 <h2 class="block-h2">Frontend</h2>
-                <h3 class="block-h3">I can work with HTML5 and CSS3 for making frontend. I am also improving my skill in Flet & Flutter
+                <h3 class="block-h3">I can work with HTML5 and CSS3 for making frontend. I am also improving my skill in
+                    Flet & Flutter
                 </h3>
             </div>
             <div class="block">
                 <h2 class="block-h2">Competitive Coding</h2>
-                <h3 class="block-h3">Constantly pushing and challenging myself to more and better problems to solve on various data
+                <h3 class="block-h3">Constantly pushing and challenging myself to more and better problems to solve on
+                    various data
                     structures and algorithms like Backtracking, Recursion, etc.</h3>
             </div>
         </div>
@@ -69,12 +72,14 @@
             </div>
             <div class="block">
                 <h2 class="block-h2">Course Complition</h2>
-                <h3 class="block-h3">I have completed this course of DSA in python in the great instrucion of Scott Barett. I learned
+                <h3 class="block-h3">I have completed this course of DSA in python in the great instrucion of Scott
+                    Barett. I learned
                     about various data structures and algorithms.</h3>
             </div>
             <div class="block">
                 <h2 class="block-h2">Course Complition</h2>
-                <h3 class="block-h3">I have completed this course of Machine Learning and AI. I learned about various skills regarding
+                <h3 class="block-h3">I have completed this course of Machine Learning and AI. I learned about various
+                    skills regarding
                     building up models and data science.</h3>
             </div>
         </div>
@@ -83,25 +88,29 @@
         <div class="projects">
             <div class="project-block">
                 <h2 class="project-block-h2">XYZ project on ABC</h2>
-                <h3 class="project-block-h3">This project is made using this this and it basically does this work and makes your life better.
+                <h3 class="project-block-h3">This project is made using this this and it basically does this work and
+                    makes your life better.
                 </h3>
                 <a href="" class="links">Github</a>
             </div>
             <div class="project-block">
                 <h2 class="project-block-h2">XYZ project on ABC</h2>
-                <h3 class="project-block-h3">This project is made using this this and it basically does this work and makes your life better.
+                <h3 class="project-block-h3">This project is made using this this and it basically does this work and
+                    makes your life better.
                 </h3>
                 <a href="" class="links">Github</a>
             </div>
             <div class="project-block">
                 <h2 class="project-block-h2">XYZ project on ABC</h2>
-                <h3 class="project-block-h3">This project is made using this this and it basically does this work and makes your life better.
+                <h3 class="project-block-h3">This project is made using this this and it basically does this work and
+                    makes your life better.
                 </h3>
                 <a href="" class="links">Github</a>
             </div>
             <div class="project-block">
                 <h2 class="project-block-h2">XYZ project on ABC</h2>
-                <h3 class="project-block-h3">This project is made using this this and it basically does this work and makes your life better.
+                <h3 class="project-block-h3">This project is made using this this and it basically does this work and
+                    makes your life better.
                 </h3>
                 <a href="" class="links">Github</a>
             </div>
@@ -114,7 +123,7 @@
         </div>
         <div class="email">
             <h4>Get in touch(Click to copy)</h4>
-            <h1>itsvineetkr@gmail.com</h1>
+            <h1 id="text-to-copy" class="click-to-copy">itsvineetkr@gmail.com</h1>
         </div>
     </footer>
     <script>
@@ -132,6 +141,17 @@
                 document.querySelector('.nav-links').classList.toggle('dark-theme');
                 document.querySelector('.links').classList.toggle('dark-theme');
             });
+        });
+        document.getElementById("text-to-copy").addEventListener("click", function () {
+            var text = document.getElementById("text-to-copy").innerText;
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+
+            // Optional: Alert the user that the text has been copied
         });
     </script>
 </body>
