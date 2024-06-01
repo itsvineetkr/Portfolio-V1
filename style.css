@@ -169,7 +169,7 @@ nav ul {
 
     .intro h5 {
         font-size: 14px;
-        font-weight: 200;
+        font-weight: 400;
         width: 80vw;
         padding-top: 14px;
     }
@@ -282,7 +282,6 @@ footer {
     padding: 10px;
     margin: 22px 0px;
     border: 2px solid white;
-    /* White border */
     border-radius: 20px;
     color: #ffffff;
     font-size: 22px;
