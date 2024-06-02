@@ -200,6 +200,16 @@ body.dark-theme a{
     color: inherit;
 }
 
+.links.dark-theme{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.links.dark-theme:hover{
+    background-color: black;
+    color: white;
+}
+
 /*Skills and all*/
 
 .skill,
@@ -387,7 +397,3 @@ footer {
     }
 }
 
-.links.dark-theme:hover{
-    background-color: black;
-    color: white;
-}
