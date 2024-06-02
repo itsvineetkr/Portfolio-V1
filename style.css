@@ -196,8 +196,8 @@ nav.dark-theme {
     background-color: #ffffff;
 }
 
-.links.dark-theme {
-    color: rgb(0, 0, 0);
+body.dark-theme a{
+    color: inherit;
 }
 
 /*Skills and all*/
@@ -385,4 +385,9 @@ footer {
     .email {
         height: 30vh;
     }
+}
+
+.links.dark-theme:hover{
+    background-color: black;
+    color: white;
 }
